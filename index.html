@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>Para mi niña bonita 💗</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600;1,700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--vino:#3a1424;--vino2:#5a2038;--oro:#d9b97c;--rosa:#e3a99b;--crema:#fbf3e6;--txt:#4a2231;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;margin:0}
+body{background:radial-gradient(ellipse at 50% 0,#6b2842 0,var(--vino) 60%,#240c16 100%);color:var(--crema);font-family:Lora,Georgia,serif;overflow:hidden;color-scheme:dark}
+.script{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:600}
+#bg{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.fl{position:absolute;bottom:-40px;color:var(--rosa);animation:up linear forwards;opacity:.35}
+@keyframes up{to{transform:translateY(-110vh) translateX(var(--dx));opacity:0}}
+.tw{position:absolute;color:var(--oro);animation:tw 4s ease-in-out infinite;opacity:.5}
+@keyframes tw{50%{opacity:.08;transform:scale(.5)}}
+.screen{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;text-align:center;opacity:0;visibility:hidden;transition:opacity 1s ease,visibility 1s;z-index:1}
+.screen.on{opacity:1;visibility:visible}
+h1,h2{margin:0 0 22px;font-size:clamp(28px,7vw,40px);line-height:1.25;color:var(--crema);font-weight:600}
+h1 span,h2 span{color:var(--oro)}
+.hint{margin-top:30px;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:var(--oro);animation:pulse 2.4s infinite}
+@keyframes pulse{50%{opacity:.4}}
+.btn{margin-top:22px;border:1px solid var(--oro);border-radius:2px;padding:13px 32px;font:500 16px Lora,Georgia,serif;letter-spacing:.06em;color:var(--vino);background:linear-gradient(135deg,#ecd5a3,var(--oro));box-shadow:0 6px 20px rgba(0,0,0,.35);cursor:pointer}
+.btn:active{transform:scale(.97)}
+.beat{display:inline-block;font-size:48px;color:var(--rosa);animation:beat 1.8s infinite}
+@keyframes beat{0%,100%{transform:scale(1)}15%{transform:scale(1.18)}30%{transform:scale(1)}}
+.env{position:relative;width:min(310px,80vw);height:min(205px,53vw);cursor:pointer;animation:float 4s ease-in-out infinite;perspective:800px}
+@keyframes float{50%{transform:translateY(-6px)}}
+.env .back,.env .front{position:absolute;inset:0;border-radius:3px}
+.env .back{background:#e8d5b8;box-shadow:0 18px 40px rgba(0,0,0,.5)}
+.env .front{background:linear-gradient(135deg,transparent 49.5%,#f1e2c8 50%) left/50% 100% no-repeat,linear-gradient(225deg,transparent 49.5%,#f1e2c8 50%) right/50% 100% no-repeat,linear-gradient(to top right,#f6ead3 50%,transparent 50.5%) bottom left/50% 55% no-repeat,linear-gradient(to top left,#f3e6cc 50%,transparent 50.5%) bottom right/50% 55% no-repeat}
+.env .flap{position:absolute;left:0;top:0;width:100%;height:58%;background:#dcc7a4;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .9s ease .1s;z-index:3}
+.env .heart{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);width:38px;height:38px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#b8344f,#7a1630);color:#f4d9a8;font-size:18px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.4);z-index:4;transition:opacity .4s}
+.env .paper{position:absolute;left:8%;width:84%;height:80%;bottom:6%;background:var(--crema);border-radius:2px;transition:transform 1s ease .8s;z-index:1}
+.env.open{animation:none}.env.open .flap{transform:rotateX(180deg);z-index:0}.env.open .heart{opacity:0}.env.open .paper{transform:translateY(-70%)}
+.paper-card{position:relative;width:min(560px,100%);max-height:80vh;display:flex;flex-direction:column;background:var(--crema);color:var(--txt);border-radius:3px;padding:30px 24px 20px;box-shadow:0 20px 50px rgba(0,0,0,.5);animation:rise 1.2s ease both;text-align:center}
+.paper-card:before{content:"";position:absolute;inset:8px;border:1px solid #d9b97c;pointer-events:none}
+@keyframes rise{from{transform:translateY(50px);opacity:0}}
+.text{overflow-y:auto;text-align:left;font-size:clamp(16px,4.2vw,19px);line-height:1.75;padding:4px 6px}
+.text p{margin:0 0 14px}
+.dots{display:flex;gap:8px;justify-content:center;margin-top:12px}
+.dots i{width:6px;height:6px;border-radius:50%;background:#d8c7b0;transition:.3s}.dots i.a{background:#9b2c48;transform:scale(1.4)}
+.paper-card .btn{margin-top:12px}
+.gift{position:relative;width:150px;height:150px;cursor:pointer;animation:float 3s ease-in-out infinite;margin-top:50px}
+.gift .box{position:absolute;bottom:0;left:0;width:100%;height:98px;background:#8e2a45;border-radius:3px;box-shadow:0 14px 30px rgba(0,0,0,.5)}
+.gift .box:after,.gift .lid:after{content:"";position:absolute;left:50%;width:20px;margin-left:-10px;top:0;bottom:0;background:var(--oro)}
+.gift .lid{position:absolute;left:-6px;top:6px;width:162px;height:34px;background:#a63552;border-radius:3px;z-index:2;transition:transform .9s ease}
+.gift .bow{position:absolute;left:50%;top:-20px;transform:translateX(-50%);font-size:34px;color:var(--oro);z-index:3;transition:transform .9s ease}
+.gift.open{animation:none}.gift.open .lid{transform:translate(40px,-90px) rotate(25deg);opacity:0;transition:transform .9s,opacity .9s .3s}
+.gift.open .bow{transform:translate(-90px,-70px) rotate(-30deg);opacity:0;transition:transform .9s,opacity .9s .3s}
+.card{display:none;width:min(420px,100%);background:var(--crema);color:var(--txt);border-radius:3px;padding:26px 20px;box-shadow:0 20px 50px rgba(0,0,0,.5);animation:rise 1s ease both;outline:1px solid var(--oro);outline-offset:-8px}
+.card .song{font-size:34px;color:#7a1630;margin:6px 0 0}.card .art{margin:2px 0 14px;font-size:14px;letter-spacing:.14em;text-transform:uppercase}
+.card p.q{font-size:16px;line-height:1.6;margin:0 0 14px;font-style:italic}
+.player{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#000;display:none}
+.player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.small{font-size:13px;margin-top:10px;opacity:.85}.small a{color:#9b2c48}
+.final-t{font-size:clamp(36px,9vw,58px);color:var(--crema);line-height:1.3;max-width:520px;text-shadow:0 2px 20px rgba(217,185,124,.35)}
+</style></head><body>
+<div id="bg"></div>
+
+<section class="screen on" id="s1">
+  <h1 class="script">Hola mi niña bonita 🥹💗<br><span style="font-size:.7em">Tengo algo muy especial para ti</span></h1>
+  <div class="env" id="env" role="button" tabindex="0" aria-label="Abrir el sobre">
+    <div class="back"></div><div class="paper"></div><div class="front"></div><div class="flap"></div><div class="heart">♥</div>
+  </div>
+  <div class="hint" id="hint">Toca el sobre para abrirlo 💌</div>
+</section>
+
+<section class="screen" id="s2">
+  <div class="paper-card">
+    <div class="text" id="txt"></div>
+    <div class="dots" id="dots"></div>
+    <div><button class="btn" id="next">Siguiente 💗</button></div>
+  </div>
+</section>
+
+<section class="screen" id="s3">
+  <div class="beat">♥</div>
+  <h2 class="script">Y antes de que te vayas mi niña bonita 🥹💗<br><span style="font-size:.75em">Todavía tengo una cosita más para ti</span></h2>
+  <button class="btn" id="go">Descubre tu regalito 🎁</button>
+</section>
+
+<section class="screen" id="s4">
+  <div class="gift" id="gift" role="button" tabindex="0" aria-label="Abrir regalo"><div class="bow">❖</div><div class="lid"></div><div class="box"></div></div>
+  <div class="hint" id="ghint">Toca tu regalito 🎁</div>
+  <div class="card" id="card">
+    <div style="font-size:26px;color:#9b2c48">♪</div>
+    <h2 class="song script">Sientes Lo Que Siento</h2>
+    <div class="art">Virlán García</div>
+    <p class="q">Porque hay canciones que también dicen lo que a veces no sabemos explicar 🥹❤️</p>
+    <div class="player" id="player"></div>
+    <button class="btn" id="play" style="margin-top:6px">▶ Escuchar canción</button>
+    <div class="small" id="small" style="display:none">Si no suena, <a id="yt" href="https://www.youtube.com/watch?v=1GWRyPzsoQw" target="_blank" rel="noopener">ábrela en YouTube</a>.</div>
+    <button class="btn" id="end" style="display:none;background:linear-gradient(135deg,#ecd5a3,#d9b97c)">Continuar 💗</button>
+  </div>
+</section>
+
+<section class="screen" id="s5">
+  <div class="final-t script">Te amo con toda mi alma bebita hermosa 💗</div>
+  <div class="beat" style="margin-top:26px;font-size:64px">♥</div>
+</section>
+
+<script>
+const $=id=>document.getElementById(id);
+const pages=[
+[`Mi niña bonita, mi niña preciosa 🥹💗`,
+`No sé si estés soñando con algo bonito ahorita pero espero de corazón que estés descansando bien y que tu corazoncito esté tranquilito 🥺 Ojalá pudiera estar cerquita de ti para abrazarte despacito darte un besito en la frente y quedarme a tu lado mientras duermes 💗`],
+[`¿Sabes algo mi niña? A veces me pongo a pensar en lo bonito que es tenerte en mi vida y en cómo consigues hacer que mis días sean especiales sin siquiera darte cuenta 🥹 Me gusta saber de ti, escucharte, compartir mis tonterías contigo, hacerte reír, enojar y encontrar cualquier pretexto para acercarme un poquito más a ti 🫶🏼`,
+`Quisiera que nunca te faltaran motivos para sonreír y que cuando tengas días difíciles recuerdes lo valiosa que eres y que mereces todas las cosas bonitas 🥰 De verdad deseo que estés bien y que puedas sentirte tranquila siendo tú misma conmigo 💗`],
+[`A veces me emociono demasiado o soy muy cursi y quizá no siempre sepa expresar bien lo que siento por ti 🥹 Pero quiero que sepas que detrás de mis mensajitos y de mis ganas de escucharte hay un cariño muy sincero y muchas ganas de seguir conociéndote poquito a poquito 💗`,
+`Tampoco quiero que sientas que tienes que estar pendiente de mí todo el tiempo ni que hablar conmigo se convierta en una obligación 🥺 Me gustaría que pudieras disfrutar nuestros momentitos sin sentir ninguna presión y que siempre tengas la confianza de decirme cómo te sientes porque para mí también es importante escucharte y entenderte, no te voy a mentir mi niña bonita a veces me da miedo hacer algo que termine alejándote de mí porque me he encariñado muchísimo contigo y me hace muy feliz tenerte en mi vida. Pero quiero aprender a entender tus tiempos y hacer las cosas de una manera bonita sin apresurarte y dejando que todo vaya pasando poquito a poquito`],
+[`Y es que mi corazón sigue encontrando algo muy especial en ti 🥹💗 Me gusta tu forma de ser me gusta compartir mis días contigo y me gusta esa felicidad tan bonita que siento cuando hablamos`,
+`No sé qué nos tenga preparado la vida mi niña pero sí sé que me gusta coincidir contigo y que quiero seguir creando momentitos bonitos a tu lado ❤️‍🩹🥹`,
+`Ojalá pudiera darte un besito en la frente ahorita abrazarte muy fuerte y desearte buenas noches cerquita de ti 🫂💗`],
+[`Descansa mucho mi niña preciosa y cuando despiertes espero que tengas una sonrisita bonita en tu carita 💗🥰`,
+`Y ya sabes mi niña bonita échale muchas ganitas a la escuela 🥹💗 pórtate bien haz todas tus cositas y no se te olvide tomar agüita durante el día, cuídate mucho y piensa en mi 🫶🏼`,
+`Y más te vale que te portes bien ehhh JAJAJAJA ojala te caigas o se te caiga el celular si andas viendo a otros así que mucho cuidado JAJAJAJAJA mentiraaa mi cieloo, pero tú pórtate bien y no me andes cambiando por ningúno que aquí tienes a tu niño bonito y quiero seguir siendo tu consentido Otei? 🥹❤️‍🩹`,
+`Recuerda que eres mi bebita tiqita 🥹🥹❤️‍🩹`]
+];
+let cur=0;
+function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('on'));$(id).classList.add('on')}
+// fondo
+const bg=$('bg');
+function heart(){const h=document.createElement('div');h.className='fl';h.textContent='♥';h.style.left=Math.random()*100+'%';h.style.fontSize=(10+Math.random()*14)+'px';h.style.setProperty('--dx',(Math.random()*60-30)+'px');h.style.animationDuration=(9+Math.random()*7)+'s';bg.appendChild(h);setTimeout(()=>h.remove(),17000)}
+setInterval(heart,1400);
+for(let i=0;i<14;i++){const s=document.createElement('div');s.className='tw';s.textContent='✦';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.fontSize=(8+Math.random()*10)+'px';s.style.animationDelay=Math.random()*3+'s';bg.appendChild(s)}
+// sobre
+let opened=false;
+function openEnv(){if(opened)return;opened=true;$('env').classList.add('open');$('hint').style.opacity=0;setTimeout(()=>{renderPage();show('s2')},2300)}
+$('env').onclick=openEnv;$('env').onkeydown=e=>{if(e.key==='Enter'||e.key===' ')openEnv()};
+// carta
+const dots=$('dots');pages.forEach(()=>dots.appendChild(document.createElement('i')));
+function renderPage(){const t=$('txt');t.innerHTML=pages[cur].map(p=>`<p>${p}</p>`).join('');t.scrollTop=0;[...dots.children].forEach((d,i)=>d.className=i===cur?'a':'');$('next').textContent=cur===pages.length-1?'Continuar 💗':'Siguiente 💗'}
+$('next').onclick=()=>{if(cur<pages.length-1){const t=$('txt');t.style.opacity=0;setTimeout(()=>{cur++;renderPage();t.style.opacity=1},300)}else show('s3')};
+$('go').onclick=()=>show('s4');
+// regalo
+let g=false;
+function openGift(){if(g)return;g=true;$('gift').classList.add('open');$('ghint').style.display='none';setTimeout(()=>{$('gift').style.display='none';$('card').style.display='block'},1200)}
+$('gift').onclick=openGift;$('gift').onkeydown=e=>{if(e.key==='Enter'||e.key===' ')openGift()};
+// música (reproductor oficial de YouTube incrustado; se crea al tocar, así el navegador permite el audio)
+$('play').onclick=()=>{
+  const p=$('player');p.style.display='block';
+  p.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/1GWRyPzsoQw?autoplay=1&playsinline=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="Sientes Lo Que Siento - Virlán García"></iframe>';
+  $('play').style.display='none';$('small').style.display='block';$('end').style.display='inline-block';
+};
+$('end').onclick=()=>show('s5');
+</script>
+</body></html>
